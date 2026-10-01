@@ -1,0 +1,27 @@
+{
+  "name": "smart-hospital-dashboard",
+  "version": "1.0.0",
+  "description": "AI-Powered Real-Time Smart Hospital Automation & Patient Tracking Dashboard",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "hospital-automation",
+    "gemini-ai",
+    "real-time-telemetry",
+    "triage",
+    "patient-tracking",
+    "react",
+    "node"
+  ],
+  "author": "Hospital Ops Engineering Team",
+  "license": "MIT"
+}
