@@ -44,6 +44,24 @@ const io = new Server(server, {
 
 initSocket(io);
 
+// Root Route
+app.get('/', (req, res) => {
+  res.json({
+    service: 'PulseOps - Smart Hospital Command Center API',
+    version: '1.0.0',
+    status: 'online',
+    health: '/api/health',
+    endpoints: {
+      auth: '/api/auth',
+      patients: '/api/patients',
+      beds: '/api/beds',
+      triage: '/api/triage',
+      tasks: '/api/tasks',
+      alerts: '/api/alerts',
+    },
+  });
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({
